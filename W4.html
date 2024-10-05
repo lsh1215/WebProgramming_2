@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 등록 관리</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>1. 직접 객체 만들기</h2>
+    <p><strong>교과목 이름:</strong> <span id="korName1">웹 프로그래밍</span></p>
+    <p><strong>등록 학생 수:</strong> <span id="nStudent1">0</span></p>
+    <p><strong>afterRegister 값:</strong> <span id="afterRegister1">0</span></p>
+    <p><strong>최종 등록 학생 수:</strong> <span id="finalCount1">0</span></p>
+    
+    <h2>2. 리터럴 표기법</h2>
+    <p><strong>교과목 이름:</strong> <span id="korName2">웹 프로그래밍</span></p>
+    <p><strong>등록 학생 수:</strong> <span id="nStudent2">0</span></p>
+    <p><strong>afterRegister 값:</strong> <span id="afterRegister2">0</span></p>
+    <p><strong>최종 등록 학생 수:</strong> <span id="finalCount2">0</span></p>
+
+    <h2>3. Prototype</h2>
+    <p><strong>교과목 이름:</strong> <span id="korName3">웹 프로그래밍</span></p>
+    <p><strong>등록 학생 수:</strong> <span id="nStudent3">0</span></p>
+    <p><strong>afterRegister 값:</strong> <span id="afterRegister3">1</span></p>
+    <p><strong>최종 등록 학생 수:</strong> <span id="finalCount3">0</span></p>
+
+
+    <script>
+        // 1. 직접 객체 만들기
+        let afterRegister1 = 0; // 1번째 챕터
+        function Subject(classCode, korName, ergName) {
+            this.classCode = classCode;
+            this.korName = korName;
+            this.ergName = ergName;
+            this.nStudent = 0;
+
+            this.register = function() {
+                this.nStudent += 1;
+            };
+
+            this.unregister = function() {
+                if (this.nStudent > 0) {
+                    this.nStudent -= 1;
+                }
+            };
+
+            this.getStudentCount = function() {
+                return this.nStudent;
+            };
+        }
+
+        let subject1 = new Subject("v024006", "웹 프로그래밍", "WebProgramming");
+        subject1.register(); // 학생 등록
+        document.getElementById("nStudent1").textContent = subject1.getStudentCount();
+        document.getElementById("afterRegister1").textContent = afterRegister1;
+        document.getElementById("finalCount1").textContent = subject1.getStudentCount() + afterRegister1;
+
+        // 2. 리터럴 표기법
+        let afterRegister2 = 0; // 2번째 챕터
+        let subject2 = {
+            classCode: "v024006",
+            korName: "웹 프로그래밍",
+            ergName: "WebProgramming",
+            nStudent: 0,
+            register: function() {
+                this.nStudent += 1;
+            },
+            unregister: function() {
+                if (this.nStudent > 0) {
+                    this.nStudent -= 1;
+                }
+            },
+            getStudentCount: function() {
+                return this.nStudent;
+            }
+        };
+
+        subject2.register(); // 학생 등록
+        document.getElementById("nStudent2").textContent = subject2.getStudentCount();
+        document.getElementById("afterRegister2").textContent = afterRegister2;
+        document.getElementById("finalCount2").textContent = subject2.getStudentCount() + afterRegister2;
+
+        // 3. Prototype 방식
+        let afterRegister3 = 1; // 3번째 챕터
+        function SubjectWithPrototype(classCode, korName, ergName) {
+            this.classCode = classCode;
+            this.korName = korName;
+            this.ergName = ergName;
+            this.nStudent = 0;
+        }
+
+        SubjectWithPrototype.prototype.register = function() {
+            this.nStudent += 1;
+        };
+
+        SubjectWithPrototype.prototype.unregister = function() {
+            if (this.nStudent > 0) {
+                this.nStudent -= 1;
+            }
+        };
+
+        SubjectWithPrototype.prototype.getStudentCount = function() {
+            return this.nStudent;
+        };
+
+        let subject3 = new SubjectWithPrototype("v024006", "웹 프로그래밍", "WebProgramming");
+        subject3.register(); // 학생 등록
+        subject3.register(); // 추가 등록
+        document.getElementById("nStudent3").textContent = subject3.getStudentCount();
+        document.getElementById("afterRegister3").textContent = afterRegister3;
+        document.getElementById("finalCount3").textContent = subject3.getStudentCount() + afterRegister3;
+    </script>
+</body>
+</html>
