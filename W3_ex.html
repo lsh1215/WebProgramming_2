@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>WEEK 3 </title>
+
+    <style>
+        #menubar {
+            background-color: rgb(177, 224, 243);
+        }
+
+        #menubar ul {
+            margin: 0;
+            padding: 0;
+            width: 567px;
+            ;
+
+        }
+
+        #menubar ul li {
+            display: inline-block;
+            list-style-type: none;
+            padding: 1px 30px;
+        }
+
+        #menubar ul li a {
+            color: white;
+        }
+
+        #menubar a:hover {
+            color: blue;
+        }
+        #box div{
+            display: inline-block;
+            height: 150px;
+            width: 150px;
+            border: 1px solid blue;
+            background-color: beige;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table ul {
+            list-style-type: disc;
+        }
+
+        table caption {
+            padding: 10px;
+        }
+
+        table th {
+            background-color: aliceblue;
+        }
+
+        td,
+        th {
+            height: 20px;
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table tr:hover {
+            background-color: rgb(246, 246, 215);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <ol>
+            <section>
+                <h1>Web Programming</h1><br>
+                <div id="menubar">
+                    <ul>
+                        <li> <a href="#Week1" style="text-decoration: none">Week1</a></li>
+                        <li> <a href="#Week2" style="text-decoration: none">Week2</a></li>
+                        <li><a href="#Week3" style="text-decoration: none">Week3</a></li>
+                        <li style="display: block;"><a href="#Week4" style="text-decoration: none">Week4</a></li>
+                    </ul>
+
+                </div>
+
+                <hr>
+                <hr><br>
+                <b>웹에 관하여</b><br><br>
+
+                <details>
+                    <summary>웹의 기본 목적</summary>
+
+                    <p>웹의 기본 목적은 한 컴퓨터에서 만든 문서를 다른 컴퓨터에서 쉽게 볼 수 있게 하는것</p>
+                </details>
+                <br>
+                <details>
+                    <summary>왜 why?</summary>
+                    <p>전 세계의 컴퓨터들을 인터넷으로 연결한 시스템을 www, 즉 웹이라 부름</p>
+                </details>
+                <br><br>
+
+
+                <table border="1">
+                    <caption><strong>Weekly Schedule</strong> </caption>
+                    <thead>
+
+                        <th>Week</th>
+                        <th>Date</th>
+                        <th>Contents</th>
+
+
+
+                    </thead>
+                    <tr>
+                        <td style="width: 20%;">1</td>
+                        <td style="width: 30%;">Sept. 2</td>
+                        <td>
+                            <ul>
+                                <li>강의개요</li>
+                                <li>웹의 개념과 구조</li>
+                                <li> Visual Studio Code</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sept. 9</td>
+                        <td>HTML Review</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sept. 16</td>
+                        <td>CSS Review</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sept. 23</td>
+                        <td>JavaScript</td>
+                    </tr>
+
+                </table>
+                <hr>
+                <li id="Week1">Week 1</li>
+                <ul>
+                    <li><a href="#a">강의개요</a> </li>
+                    <li><a href="#b">웹의 개념과 역사</a></li>
+                    <li><a href="#c">Visual Studio Code</a></li>
+                    <ol>
+                        <li>설치</li>
+                        <li>유용한 plug-ins
+                            <ul>
+                                <li>Material Theme</li>
+                                <li>Prettier</li>
+                                <li>indent-rainbow</li>
+                                <li>Auto Rename Tag</li>
+                                <li>HTML CSS Support</li>
+                                <li>Live Server</li>
+                            </ul>
+                        </li>
+                        <li>EMMET</li>
+                    </ol>
+                    </li>
+
+                </ul>
+                <hr>
+            </section>
+
+            <section>
+
+
+                <li id="Week2"><strong> week 2:<a href=""> HTML Review </a></strong> </li><br>
+
+
+
+
+                <b><em>Input Types</em></b><br><br>
+
+                <b><u>Check Box</u></b> <br>
+                <label><input type="checkbox">HTML5 </label>
+                <label><input type="checkbox">CSS3</label>
+                <label><input type="checkbox">JavaScript</label>
+                <br><br>
+
+                <b><u>Radio Button</u></b><br><br>
+                <input type="radio">HTML5<br>
+                <input type="radio">CSS3<br>
+                <input type="radio">JavaScript<br><br>
+
+                <b><u>Combo Box</u></b><br><br>
+                <form>
+                    <select>
+                        <option selected>HTML5</option>
+                        <option>CSS3</option>
+                        <option>JavaScript</option>
+                    </select>
+                </form>
+                <br>
+                <hr>
+            </section>
+
+            <section>
+                <li id="Week3"><b>Week3: CSS Review</b></li><br><br>
+                <ul>
+                    
+                    <li> Selectors: *, tag, #id, .class, 가상클래스, attribute</li>
+                    <li> Properties: background-color, background, color, border-color, font-size, text-align, text-decoration, font-family, ...</li>
+                    <li> Box Model
+                        <ul listyle="list-style-type: square;">
+                           
+                            <li> block 요소, inline 요소</li>
+                            <li> margin, padding, border, height, width</li>
+                        </ul>
+                       
+                
+                    <li> display: block, inline, inline-block</li>
+                    <li> position: absolute, relative,fixed, float</li> 
+
+                    
+                </ul>
+                <br>
+                <div id="box"><div></div></div>
+
+            </section>
+            <hr>
+            <section>
+                <li id="Week4">Week4 :</li>
+            </section>
+            <br>
+        </ol>
+    </main>
+    <footer>
+        <hr>
+        Copyright &#169; 2024 by Sung-Dong ALL Right Reserved
+    </footer>
+</body>
+
+</html>
