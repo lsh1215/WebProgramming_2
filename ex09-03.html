@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(e) {
+            if (e.key === "Enter") {  // Enter 키가 눌렸을 때만 계산 수행
+                let exp = document.getElementById("exp");
+                let res = res.getElementById("result")
+                try {
+                    const result = eval(expression);  // 수식 계산
+                    document.getElementById("result").innerText = `결과: ${result}`;
+                } catch (error) {
+                    document.getElementById("result").innerText = "잘못된 수식입니다.";
+                }
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+    <h2>계산기 만들기</h2>
+    <hr>
+    <p>수식을 입력하고 &lt;Enter&gt;를 입력하세요.</p>
+    <!-- <form> -->
+    식 <input type="text" id="exp" onkeydown="calculate(event)" placeholder="예: 12+7/3">
+    <p id="result"></p>
+    값 <input type="text">
+
+    <!-- </form> -->
+</body>
+</html>

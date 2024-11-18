@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계 만들기</title>
+    <script>
+        let clockInterval;
+
+        // 현재 시간을 업데이트하는 함수
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').value = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // 시계를 시작하는 함수
+        function startClock() {
+            updateClock(); // 즉시 현재 시간을 한 번 표시
+            clockInterval = setInterval(updateClock, 1000); // 매 1초마다 시간 업데이트
+            document.getElementById('clock').style.color = "black"; // 시계가 돌아가면 글자 색을 검정색으로
+        }
+
+        // 시계를 멈추거나 다시 시작하는 함수
+        function toggleClock() {
+            const clockElement = document.getElementById('clock');
+            if (clockInterval) {
+                clearInterval(clockInterval); // 시계 멈추기
+                clockInterval = null;
+                clockElement.style.color = "gray"; // 시계가 멈췄을 때 회색으로 변경
+            } else {
+                startClock(); // 시계 다시 시작
+            }
+        }
+
+        window.onload = startClock; // 페이지 로드 시 시계 시작
+    </script>
+</head>
+<body>
+    <h2>div 태그에 시계 만들기</h2>
+    <hr>
+    <div>
+        <!-- 시간을 표시할 input box -->
+        <input type="text" id="clock" readonly onclick="toggleClock()" style="font-size: 16px; cursor: pointer;">
+    </div>
+    <p>시간을 클릭하면 시계가 멈추고, 다시 클릭하면 시계가 시작됩니다.</p>
+</body>
+</html>
