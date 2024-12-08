@@ -34,7 +34,7 @@
 
    - prac9-1.html : 라디오버튼 선택된 것 알아내서 그림 그리기
    - prac9-2.html : 9-1 발전 코드
-   - prac9-3.html : 실습문제 9-3 (Enter 키가 입력되었을 때 수식의 값을 계산하기)
+   - prac9-3.html : 실습문제 9-3 
 
 7. 7주차 연습
 
@@ -51,38 +51,38 @@
 
 10. 10주차 연습
 
-- ex13-9.html: 워커 태스크를 활용한 덧셈
-- ex13-10.html,timer.js: 워커 태스크 타이머
-- prac13-6.html, worker.js: 워커 태스크를 활용한 곱셈
+      - ex13-9.html: 워커 태스크를 활용한 덧셈
+      - ex13-10.html,timer.js: 워커 태스크 타이머
+      - prac13-6.html, worker.js: 워커 태스크를 활용한 곱셈
 
 11. 11주차 고급 자바스크립트1
 
-- dj.js: 함수형 프로그램, 디버깅 하는 법
-- backtic.js: 백틱 활용
-- forEach.js: forEach() 함수 연습
+      - dj.js: 함수형 프로그램, 디버깅 하는 법
+      - backtic.js: 백틱 활용
+      - forEach.js: forEach() 함수 연습
 
 12. 12주차 고급 자바스크립트2
 
-- funcPr-practice.js: forEach(), reduce(), map(), 화살표 함수 등등 연습
-- avgScore.js: filter, map, reduce 사용+여러 함수를 한번에 사용하기
-- birthYear.js: map을 활용하여 간단한 나이 계산 프로그램
-- greeting.js: 커링 공부
+      - funcPr-practice.js: forEach(), reduce(), map(), 화살표 함수 등등 연습
+      - avgScore.js: filter, map, reduce 사용+여러 함수를 한번에 사용하기
+      - birthYear.js: map을 활용하여 간단한 나이 계산 프로그램
+      - greeting.js: 커링 공부
 
 13. 13주차 nodeJs
 
-- run.js: node의 Non-blocking I/O
-- webServer1.js: 간단한 웹 서버 만들기
-- webServer2.js: 웹 서버 만들기(html 파일을 가져와서)
-- osModule.js: 모듈 사용 연습
+      - run.js: node의 Non-blocking I/O
+      - webServer1.js: 간단한 웹 서버 만들기
+      - webServer2.js: 웹 서버 만들기(html 파일을 가져와서)
+      - osModule.js: 모듈 사용 연습
 
 14. 14주차 express
 
-- app1.js: express 애플리케이션 만들고 웹 서버 열기
-- app4.js: get()을 사용해 여러 경로에서 접속할 수 있는 서버 만들기
-- app7.js: query문 사용하기
-- app8.js: html 문서의 body에 전달되는 데이터를 서버로 받아오기
-- login1.html: app8.js에서 사용할 웹 페이지
-- app9.js: 라우터 미들웨어 사용하기(사용자 요청 기능을 path로 구별)
-- login2.html: app9.js에서 사용할 웹 페이지
-- app10.js: URL 파라미터 사용하기(이름 받아오기)
-- login3.html: app10.js에서 사용할 웹 페이지
+      - app1.js: express 애플리케이션 만들고 웹 서버 열기
+      - app4.js: get()을 사용해 여러 경로에서 접속할 수 있는 서버 만들기
+      - app7.js: query문 사용하기
+      - app8.js: html 문서의 body에 전달되는 데이터를 서버로 받아오기
+      - login1.html: app8.js에서 사용할 웹 페이지
+      - app9.js: 라우터 미들웨어 사용하기(사용자 요청 기능을 path로 구별)
+      - login2.html: app9.js에서 사용할 웹 페이지
+      - app10.js: URL 파라미터 사용하기
+      - login3.html: app10.js에서 사용할 웹 페이지
