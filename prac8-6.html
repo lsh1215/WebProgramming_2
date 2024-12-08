@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DomPrac6</title>
+    <script>
+      function getInput(obj) {
+        let user = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요.");
+        if (user == null) {
+          document.write("입력된 값이 없습니다.");
+        } else {
+          obj.innerHTML = user;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h2>innerHTML</h2>
+    <hr />
+    <p onclick="getInput(this)">이번 여름에는 어디로 여행을 갈까요??</p>
+  </body>
+</html>
