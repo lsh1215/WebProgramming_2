@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout</title>
+    <script>
+      let timerID;
+      function run() {
+        let div = document.getElementById("timer");
+        let now = new Date();
+        div.innerHTML = now.toLocaleTimeString();
+        timerID = setInterval(startTimer, 1000);
+      }
+      function startTimer() {
+        div = document.getElementById("timer");
+        now = new Date();
+        div.innerHTML = now.toLocaleTimeString();
+      }
+    </script>
+  </head>
+  <body onload="run();">
+    <h2>div 태그에 시계 만들기</h2>
+    <hr />
+    <div id="timer"></div>
+  </body>
+</html>

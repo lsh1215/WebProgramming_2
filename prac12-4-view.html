@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일기보기</title>
+    <style>
+      span {
+        border: 1px, yellowgreen, solid;
+        padding-right: 3px;
+        padding-left: 3px;
+      }
+      td {
+        border-bottom: 1px solid;
+        padding-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>일기보기</h3>
+    <hr />
+    <div id="diary"></div>
+    <script>
+      document.write("<table>");
+      for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let val = localStorage.getItem(key);
+        document.write("<tr>");
+        document.write("<td><span>" + (i + 1) + "</span></td>");
+        document.write("<td width='100pt'><b>" + key + "</b></td>");
+        document.write("<td>" + val + "</td>");
+        document.write("</tr>");
+      }
+      document.write("<table>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>라디오 버튼을 클릭하면 이미지를 출력</title>
+    <script>
+      function show(obj) {
+        let newimg = document.getElementById("newimg");
+        if (newimg) {
+          newimg.parentElement.removeChild(newimg);
+        }
+        let img = new Image();
+        let parent = document.getElementById("parent");
+        img.src = obj.value;
+        img.setAttribute("id", "newimg");
+        parent.appendChild(img);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h3>버튼을 누르면 라디오 버튼의value를 출력</h3>
+    <hr />
+    <form id="parent">
+      <input
+        type="radio"
+        name="fruits"
+        value="./fruit/banana.jpeg"
+        onclick="show(this)"
+      />바나나
+      <input
+        type="radio"
+        name="fruits"
+        value="./fruit/mango.jpeg"
+        onclick="show(this)"
+      />망고
+      <input
+        type="radio"
+        name="fruits"
+        value="./fruit/apple.jpeg"
+        onclick="show(this)"
+      />사과 <br /><br />
+    </form>
+  </body>
+</html>

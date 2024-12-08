@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일기쓰기</title>
+  </head>
+  <body>
+    <h3>일기쓰기</h3>
+    <hr />
+    <p id="date"></p>
+    <textarea name="text" id="text" cols="80" rows="20"></textarea>
+    <br />
+    <input type="button" value="저장" onclick="store()" />
+    <input type="button" value="보기" onclick="view()" />
+
+    <script>
+      let p = document.getElementById("date");
+      let now = new Date();
+      let time = now.toLocaleDateString();
+      let text = document.getElementById("text");
+      p.innerHTML = "오늘 " + time;
+      function store() {
+        if (!window.localStorage) {
+          alert("로컬 스토리지를 지원하지 않습니다.");
+          return;
+        }
+        localStorage.setItem(time, text.value);
+      }
+      function view() {
+        window.open("practice12-4-view.html", "veiwwin");
+      }
+    </script>
+  </body>
+</html>

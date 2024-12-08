@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onwheel</title>
+    <script>
+      function wheel(e, obj) {
+        let size = 1;
+        if (e.wheelDelta < 0) {
+          size -= 0.05;
+          if (size < 0) size = 0;
+        } else {
+          size += 0.05;
+        }
+        obj.style.width = obj.width * size + "px";
+        obj.style.height = obj.height * size + "px";
+      }
+    </script>
+  </head>
+  <body>
+    <h3>마우스 휠을 이용한 이미지 확대/ 축소</h3>
+    <hr />
+    <p>
+      이미지 위에 휠을 위로 굴리면 이미지가 축소되고 아래로 굴리면 이미지가 확대
+    </p>
+    <img
+      src="https://cdn.imweb.me/upload/S202002173b45b771075df/7e4c5fc68b41b.jpg"
+      onwheel="wheel(event,this)"
+    />
+  </body>
+</html>

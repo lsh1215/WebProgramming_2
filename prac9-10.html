@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기 만들기</title>
+    <style>
+      input[type="button"] {
+        width: 70px;
+        height: 23px;
+        font-size: 13px;
+      }
+    </style>
+    <script>
+      //버튼을 누르면 입력 창에 들어가게
+      function input(obj) {
+        let res = document.getElementById("calcres");
+        //back 누르면 마지막 문자 지움
+        if (obj.value == "BACK") {
+          res.value = res.value.slice(0, -1);
+          //지웠을때 아무것도 없다면
+          if (res.value == "") res.value = 0; //0으로 바꿈
+          return;
+        }
+        //처음 입력하는 경우에는
+        if (res.value == 0) res.value = obj.value; //들어온 문자열을 그대로 출력
+        //그 이외는
+        else res.value += obj.value; //원래 문자열과 합쳐 출력
+
+        // c/ce 누르면 초기화
+        if (obj.value == "CE" || obj.value == "C") res.value = 0;
+      }
+      //= 누르면 계산
+      function calculate() {
+        let res = document.getElementById("calcres");
+        res.value = eval(res.value);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>계산기 만들기</h2>
+    <hr />
+    <input type="text" id="calcres" value="0" width="200%" />
+    <br />
+    &nbsp;
+    <input type="button" value="BACK" onclick="input(this)" /> &nbsp;
+    <input type="button" value="CE" onclick="input(this)" /> &nbsp;
+    <input type="button" value="C" onclick="input(this)" /> &nbsp;
+    <input type="button" value="=" onclick="calculate()" /> &nbsp;
+    <br />
+    &nbsp;
+    <input type="button" value="7" onclick="input(this)" /> &nbsp;
+    <input type="button" value="8" onclick="input(this)" /> &nbsp;
+    <input type="button" value="9" onclick="input(this)" /> &nbsp;
+    <input type="button" value="/" onclick="input(this)" /> &nbsp;
+    <br />
+    &nbsp;
+    <input type="button" value="4" onclick="input(this)" /> &nbsp;
+    <input type="button" value="5" onclick="input(this)" /> &nbsp;
+    <input type="button" value="6" onclick="input(this)" /> &nbsp;
+    <input type="button" value="*" onclick="input(this)" /> &nbsp;
+    <br />
+    &nbsp;
+    <input type="button" value="1" onclick="input(this)" /> &nbsp;
+    <input type="button" value="2" onclick="input(this)" /> &nbsp;
+    <input type="button" value="3" onclick="input(this)" /> &nbsp;
+    <input type="button" value="-" onclick="input(this)" /> &nbsp;
+    <br />
+    &nbsp;
+    <input type="button" value="0" onclick="input(this)" /> &nbsp;
+    <input type="button" value="+" onclick="input(this)" /> &nbsp;
+    <input type="button" value="NONE" /> &nbsp;
+    <input type="button" value="NONE" /> &nbsp;
+  </body>
+</html>
